@@ -1,0 +1,103 @@
+<!--style>
+    .col-centered{
+        float: none;
+        margin: 0 auto;}
+</style-->
+
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-8 col-centered">
+        <form name="loginForm" autocomplete="off" novalidate >
+            <h3>Buddy System</h3>
+            <div class="well">
+                <div class="form-group">
+                    <label>User Name:</label>
+                    <div class="login-error" data-ng-show="loginForm.userName.$error.required">
+                        Please specify user name!
+                    </div>
+                    <div class="login-error" data-ng-show="loginForm.userName.$error.email">
+                        Please enter a valid email address!
+                    </div>
+                    <div class="login-error" data-ng-show="loginForm.userName.$error.maxlength">
+                        User name length must be less than 56!
+                    </div>
+                    <input name="userName" type="email" class="field-text"
+                           placeholder="Email"
+                           data-ng-maxlength="56"
+                           required ng-model="userName">
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <div class="login-error" data-ng-show="loginForm.password.$error.required">
+                        Please specify password!
+                    </div>
+
+                    <div class="login-error" data-ng-show="loginForm.password.$error.minlength">
+                        Password length must be at least 6!
+                    </div>
+                    <input name="password" type="password" class="field-text"
+                           placeholder="Password"
+                           data-ng-minlength="6"
+                           required ng-model="password">
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password:</label>
+                    <div class="login-error" data-ng-show="!passwordMatch()">
+                       Password must match!
+                    </div>
+
+                    <input name="confirmPassword" type="password" class="field-text"
+                           placeholder="Confirm Password"
+                           data-ng-minlength="6"
+                           required ng-model="confirmPassword">
+                </div>
+                <div class="form-group">
+                    <label>First Name:</label>
+                    <div class="login-error" data-ng-show="loginForm.firstName.$error.required">
+                        Please specify first name!
+                    </div>
+                    <div class="login-error" data-ng-show="loginForm.firstName.$error.pattern">
+                        First Name must be letters!
+                    </div>
+                    <div class="login-error" data-ng-show="loginForm.firstName.$error.maxlength">
+                        First name length must not be more than 50!
+                    </div>
+
+                    <input name="firstName" type="text" class="field-text"
+                           placeholder="First Name"
+                           data-ng-maxlength="50"
+                           data-ng-pattern="/^[a-zA-Z]+$/"
+                           data-ng-maxlength="50"
+                           required ng-model="firstName">
+                </div>
+                <div class="form-group">
+                    <label>Last Name:</label>
+                    <div class="login-error" data-ng-show="loginForm.lastName.$error.maxlength">
+                        Last name length must not be more than 50!
+                    </div>
+                    <div class="login-error" data-ng-show="loginForm.lastName.$error.pattern">
+                        Last Name must be letters!
+                    </div>
+                    <input name="lastName" type="text" class="field-text"
+                           placeholder="Last Name"
+                           data-ng-maxlength="50"
+                           data-ng-pattern="/^[a-zA-Z]+$/"
+                           ng-model="LastNameName">
+                </div>
+                <div class="form-group">
+                    <label>Birthday:</label>
+                    <div class="login-error" data-ng-show="loginForm.dt.$error.required">
+                        Please choose birthday!
+                    </div>
+                    <div birthday-chooser></div>
+                </div>
+            </div>
+            <div class="login-container-controls">
+                <button class="btn btn-primary" type="button" ng-click="submit(loginForm.userEmail.$error)" data-ng-disabled="isDisabled()">Sign Up</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+

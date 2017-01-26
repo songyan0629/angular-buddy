@@ -1,0 +1,63 @@
+<div style="margin:10px">
+  <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-bordered">
+
+    <thead>
+    <tr>
+      <th colspan="4"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+      <th colspan="1"><button type="button" ng-click="addBuddy()" class="btn btn-sm btn-primary" >
+        <i class="glyphicon glyphicon-plus">
+        </i> Add Buddy
+      </button></th>
+    </tr>
+    <tr>
+      <th st-sort="userName">User Name</th>
+      <th st-sort="firstName">First Name</th>
+      <th st-sort="lastName">Last Name</th>
+      <th st-sort="status">Status</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="row in displayedCollection">
+      <td><div popover-placement="bottom" uib-popover-template="dynamicPopover.templateUrl" popover-title="Info" type="text" >{{row.userName}}</div>
+        <script type="text/ng-template" id="myPopoverTemplate.html">
+          <table class="table-details">
+            <tbody>
+            <tr >
+              <th >Email:</th>
+              <td data-ng-bind="row.email"></td>
+            </tr>
+            <tr>
+              <th translate>Birthday:</th>
+              <td data-ng-bind="row.birthDate |date:'yyyy/MM/dd'"></td>
+            </tr>
+            <tr>
+              <th translate>Biograph:</th>
+              <td data-ng-bind="row.bio"></td>
+            </tr>
+            </tbody>
+          </table>
+        </script></td>
+      <td>{{row.firstName}}</td>
+      <td>{{row.lastName}}</td>
+      <td>{{row.status}}</td>
+      <td>
+        <button type="button" data-toggle="tooltip" title="set priority" ng-click="priorityBuddy(row)" class="btn btn-xs btn-primary">
+          <i class="glyphicon glyphicon-edit">
+          </i>
+        </button>
+
+        <button type="button" data-toggle="tooltip" title="delete" ng-click="removeItem(rowCollection,row)" class="btn btn-xs btn-primary">
+          <i class="glyphicon glyphicon-trash">
+          </i>
+        </button>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+
+
+
+</div>
+

@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "userName": "laurent",
+        "firstName":"Laurent",
+        "lastName":"Renard",
+        "status":"Available",
+        "birthDate":"1987-05-21",
+        "priority":"1",
+        "email":"laurent@gamil.com",
+        "bio":"happy person"
+
+    }, 
+    {
+        "id": 2,
+        "userName": "blandine",
+        "firstName":"Blandine",
+        "lastName":"Faivre",
+        "status":"Busy",
+        "birthDate":"1987-04-25",
+        "priority":"2",
+        "email":"blandine@gamil.com",
+        "bio":"happy person"
+    },
+    {
+        "id": 3,
+        "userName": "olivier",
+        "firstName":"Olivier",
+        "lastName":"Frere",
+        "status":"Idle",
+        "birthDate":"1955-08-27",
+        "priority":"3",
+        "email":"olivier@gamil.com",
+        "bio":"happy person"
+    },
+    {
+        "id": 4,
+        "userName": "max",
+        "firstName":"Max",
+        "lastName":"Eponge",
+        "status":"Offline",
+        "birthDate":"1966-06-06",
+        "priority":"1",
+        "email":"max@gamil.com",
+        "bio":"happy person"
+    }
+
+]

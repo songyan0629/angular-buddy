@@ -1,0 +1,97 @@
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+.login-error {
+  color: red;
+  font-weight: bold;
+}
+
+.field-group {
+  margin-bottom: 15px; }
+  .field-group .field-checkbox,
+  .field-group .field-radio {
+    vertical-align: middle;
+  }
+
+.field-text, .field-textarea {
+  background-color: field-text("background.color");
+  border: field-text("border.width") solid field-text("border.color");
+  border-radius: field-text("border.radius");
+  color: field-text("text.color");
+  display: inline-block;
+  font-family: inherit;
+  font-size: field-text("text.size");
+  height: field-text("height.normal");
+  line-height: 1.3;
+  transition: border-color ease .15s;
+  vertical-align: middle;
+  width: 100%; }
+  .field-text:focus, .field-textarea:focus {
+    border-color: field-text("text.color");
+    outline: 0; }
+  .field-text:invalid, .field-textarea:invalid {
+    box-shadow: none; }
+  .field-text:disabled, .field-text[readonly], .field-text[readonly="readonly"], .field-textarea:disabled, .field-textarea[readonly], .field-textarea[readonly="readonly"] {
+    border-color: field-disabled("border.color");
+    color: field-disabled("text.color"); }
+    .field-text:disabled::-webkit-input-placeholder, .field-text[readonly]::-webkit-input-placeholder, .field-text[readonly="readonly"]::-webkit-input-placeholder, .field-textarea:disabled::-webkit-input-placeholder, .field-textarea[readonly]::-webkit-input-placeholder, .field-textarea[readonly="readonly"]::-webkit-input-placeholder {
+      color: field-disabled("text.color"); }
+    .field-text:disabled::-moz-placeholder, .field-text[readonly]::-moz-placeholder, .field-text[readonly="readonly"]::-moz-placeholder, .field-textarea:disabled::-moz-placeholder, .field-textarea[readonly]::-moz-placeholder, .field-textarea[readonly="readonly"]::-moz-placeholder {
+      color: field-disabled("text.color"); }
+    .field-text:disabled:-moz-placeholder, .field-text[readonly]:-moz-placeholder, .field-text[readonly="readonly"]:-moz-placeholder, .field-textarea:disabled:-moz-placeholder, .field-textarea[readonly]:-moz-placeholder, .field-textarea[readonly="readonly"]:-moz-placeholder {
+      color: field-disabled("text.color"); }
+    .field-text:disabled:-ms-input-placeholder, .field-text[readonly]:-ms-input-placeholder, .field-text[readonly="readonly"]:-ms-input-placeholder, .field-textarea:disabled:-ms-input-placeholder, .field-textarea[readonly]:-ms-input-placeholder, .field-textarea[readonly="readonly"]:-ms-input-placeholder {
+      color: field-disabled("text.color"); }
+  .field-text:disabled, .field-textarea:disabled {
+    cursor: not-allowed; }
+  .field-text::-webkit-input-placeholder, .field-textarea::-webkit-input-placeholder {
+    color: field-text("placeholder.color");
+    font-size: field-text("placeholder.size");
+    font-style: field-text("placeholder.style"); }
+  .field-text::-moz-placeholder, .field-textarea::-moz-placeholder {
+    color: field-text("placeholder.color");
+    font-size: field-text("placeholder.size");
+    font-style: field-text("placeholder.style"); }
+  .field-text:-moz-placeholder, .field-textarea:-moz-placeholder {
+    color: field-text("placeholder.color");
+    font-size: field-text("placeholder.size");
+    font-style: field-text("placeholder.style"); }
+  .field-text:-ms-input-placeholder, .field-textarea:-ms-input-placeholder {
+    color: field-text("placeholder.color");
+    font-size: field-text("placeholder.size");
+    font-style: field-text("placeholder.style");
+  }
+
+.field-text {
+  padding: 0 10px; }
+  .field-text[type=number] {
+    -moz-appearance: textfield; }
+    .field-text[type=number]::-webkit-outer-spin-button, .field-text[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+  .field-text::-ms-clear {
+    display: none;
+  }
+
+.field-big {
+  height: 42px;
+  line-height: 2.0;
+}
+
+.field-error, .field-warning {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: -field-validation("size")/2;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  height: field-validation("size");
+  width: field-validation("size"); }
+  .field-error svg, .field-warning svg {
+    height: field-validation("size");
+    width: field-validation("size");
+  }
+
+
+

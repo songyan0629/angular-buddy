@@ -1,0 +1,22 @@
+<div class="panel" id="modal-body">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-title">Set Buddy Priority</h4>
+        <form name="myForm" novalidate>
+            <div class="well">
+                <div class="form-group">
+                    <label>Priority:</label>
+                    <select name="priority" class="field-text"  ng-model="modal.priority">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select><br>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="modal.setPriority()">OK</button>
+    <button class="btn btn-primary" type="button" ng-click="$dismiss()">Cancel</button>
+</div>
+
