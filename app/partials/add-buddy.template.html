@@ -6,82 +6,124 @@
         <div class="well">
             <div class="form-group">
                 <label>User Name:</label>
-                <div class="login-error" data-ng-show="modal.myForm.userName.$error.required">
-                    Please specify user name!
+                <div class="row">
+                    <div class="col-sm-7" >
+                        <input name="userName" type="text" class="field-text"
+                               required ng-model="modal.newUser.userName">
+                    </div>
+                    <div class="col-sm-5" >
+                        <div class="login-error" data-ng-show="modal.myForm.userName.$error.required">
+                            Please specify user name!
+                        </div>
+                    </div>
                 </div>
-                <input name="userName" type="text" class="field-text"
-                       required ng-model="modal.newUser.userName">
             </div>
             <div class="form-group">
-                <div class="login-error" data-ng-show="modal.myForm.firstName.$error.required">
-                    Please specify first name!
-                </div>
                 <label>First Name:</label>
-                <input name="firstName" type="text"class="field-text"
-                       required ng-model="modal.newUser.firstName">
+                <div class="row">
+                    <div class="col-sm-7" >
+                        <input name="firstName" type="text"class="field-text"
+                               required ng-model="modal.newUser.firstName">
+                    </div>
+                    <div class="col-sm-5" >
+                        <div class="login-error" data-ng-show="modal.myForm.firstName.$error.required">
+                            Please specify first name!
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label>Last Name:</label>
-                <div class="login-error" data-ng-show="modal.myForm.lastName.$error.required">
-                    Please specify last name!
+                <div class="row">
+                    <div class="col-sm-7" >
+                        <input name="lastName" type="text" class="field-text"
+                               required ng-model="modal.newUser.lastName">
+                    </div>
+                    <div class="col-sm-5" >
+                        <div class="login-error" data-ng-show="modal.myForm.lastName.$error.required">
+                            Please specify last name!
+                        </div>
+                    </div>
                 </div>
-                <input name="lastName" type="text" class="field-text"
-                       required ng-model="modal.newUser.lastName">
             </div>
             <div class="form-group">
                 <label>Status:</label>
-                <div class="login-error" data-ng-show="modal.myForm.status.$error.required">
-                    Please specify status!
+                <div class="row">
+                    <div class="col-sm-7" >
+                        <select name="status" class="field-text"  ng-model="modal.newUser.status" required>
+                            <option value="Available">Available</option>
+                            <option value="Busy">Busy</option>
+                            <option value="Idle">Idle</option>
+                            <option value="Offline">Offline</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-5" >
+                        <div class="login-error" data-ng-show="modal.myForm.status.$error.required">
+                            Please specify status!
+                        </div>
+                    </div>
                 </div>
-                <select name="status" class="field-text"  ng-model="modal.newUser.status" required>
-                    <option value="Available">Available</option>
-                    <option value="Busy">Busy</option>
-                    <option value="Idle">Idle</option>
-                    <option value="Offline">Offline</option>
-                </select><br>
             </div>
             <div class="form-group">
                 <label>Email:</label>
-                <div class="login-error" data-ng-show="modal.myForm.email.$error.required">
-                    Please specify email!
+                <div class="row">
+                    <div class="col-sm-7" >
+                        <input name="email" type="email" class="field-text"
+                               required ng-model="modal.newUser.email">
+                    </div>
+                    <div class="col-sm-5" >
+                        <div class="login-error" data-ng-show="modal.myForm.email.$error.required">
+                            Please specify email!
+                        </div>
+                        <div class="login-error" data-ng-show="modal.myForm.email.$error.email">
+                            Please enter a valid email address!
+                        </div>
+                    </div>
                 </div>
-                <div class="login-error" data-ng-show="modal.myForm.email.$error.email">
-                    Please enter a valid email address!
-                </div>
-                <input name="email" type="email" class="field-text"
-                       required ng-model="modal.newUser.email">
             </div>
             <div class="form-group">
                 <label>Birthday:</label>
-                <div class="login-error" data-ng-show="modal.myForm.birthday.$error.required">
-                    Please specify birthday!
+                <div class="row">
+                    <div class="col-sm-7" >
+                        <div birthday-chooser></div>
+                    </div>
+                    <div class="col-sm-5" >
+                        <div class="login-error" data-ng-show="modal.myForm.birthday.$error.required">
+                            Please specify birthday!
+                        </div>
+                    </div>
                 </div>
-                <div birthday-chooser></div>
-                <!--p class="input-group">
-                    <input name="birthday" type="text" class="form-control" uib-datepicker-popup ng-model="dt" is-open="popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="open2()"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                </p-->
             </div>
             <div class="form-group">
                 <label>Priority:</label>
-                <div class="login-error" data-ng-show="modal.myForm.priority.$error.required">
-                    Please specify priority!
+                <div class="row">
+                    <div class="col-sm-7" >
+                        <select name="priority" class="field-text"  ng-model="modal.newUser.priority" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-5" >
+                        <div class="login-error" data-ng-show="modal.myForm.priority.$error.required">
+                            Please specify priority!
+                        </div>
+                    </div>
                 </div>
-                <select name="priority" class="field-text"  ng-model="modal.newUser.priority" required>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select><br>
             </div>
             <div class="form-group">
                 <label>Biograph:</label>
-                <div class="login-error" data-ng-show="modal.myForm.bio.$error.required">
-                    Please specify Biograph!
+                <div class="row">
+                    <div class="col-sm-7" >
+                        <input name="bio" type="text" class="field-text"
+                               required ng-model="modal.newUser.bio">
+                    </div>
+                    <div class="col-sm-5" >
+                        <div class="login-error" data-ng-show="modal.myForm.bio.$error.required">
+                            Please specify Biograph!
+                        </div>
+                    </div>
                 </div>
-                <input name="bio" type="text" class="field-text"
-                       required ng-model="modal.newUser.bio">
             </div>
         </div>
         <div class="modal-footer">

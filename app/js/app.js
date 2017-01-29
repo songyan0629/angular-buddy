@@ -24,6 +24,6 @@ buddyApp.config(['$routeProvider',
         controller: 'BuddyListCtrl'
       }).
       otherwise({
-        redirectTo: '/login'
+        redirectTo: '/buddies'
       });
   }]);

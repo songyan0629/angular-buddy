@@ -4,7 +4,8 @@
 }
 .login-error {
   color: red;
-  font-weight: bold;
+  font-weight: normal;
+  font-size: 12px;
 }
 
 .field-group {
