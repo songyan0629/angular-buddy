@@ -1,14 +1,5 @@
 # AngularJS Buddy System Application
-
-
-
-
-
-
-
-
-
-
+- Run `npm install`
 - Run `npm start`
 - navigate your browser to `http://localhost:8000/app/index.html` to see the app running in your browser.
 
